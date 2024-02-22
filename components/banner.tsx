@@ -55,10 +55,6 @@ export default function Banner({ list }: { list: MovieList }) {
                 </div>
                 <div className="w-full h-full pointer-events-none rounded-l-2xl backdrop-blur-xl z-[1] absolute top-0">
                   <div className="w-3/4 h-full">
-                    {/* <img
-                      className="object-cover rounded-l-2xl h-full w-3/4"
-                      src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                    /> */}
                     <Image
                       objectFit="cover"
                       fill
