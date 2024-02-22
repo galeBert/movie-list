@@ -1,6 +1,7 @@
 import { SearchBar } from "@/components/search-bar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +22,9 @@ export default function RootLayout({
         <nav className="fixed top-0 z-10 left-0 w-full">
           <div className="container ml-auto w-full px-4 py-3 bg-red-400 flex items-center justify-between">
             <div className="flex space-x-3">
-              <h1>Netflix</h1>
+              <Link href="/" className="text-3xl">
+                Netflix
+              </Link>
               <div className="flex space-x-2 items-center">
                 <h3>Series</h3>
                 <h3>Movies</h3>
