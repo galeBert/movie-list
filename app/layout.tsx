@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`overflow-x-hidden ${inter.className}`}>
-        <nav className="fixed top-0 z-10 left-0 w-full">
-          <div className="container ml-auto w-full px-4 py-3 bg-red-400 flex items-center justify-between">
+        <nav className="fixed bg-black text-white top-0 z-10 left-0 w-full">
+          <div className="container ml-auto w-full px-4 py-3 flex items-center justify-between">
             <div className="flex space-x-3">
               <Link href="/" className="text-3xl">
                 Netflix

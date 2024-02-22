@@ -38,7 +38,7 @@ export default function Search() {
   }
   return (
     <div className="container flex flex-col overflow-auto items-center space-y-6 w-full h-full pt-20">
-      <Label>Search for '{q}'</Label>
+      <Label>Search for &apos;{q}&apos;</Label>
       <div className="grid mx-auto space-y-4 grid-cols-7 h-full w-full">
         {movies.map((movie: Movie, index: Key | null | undefined) => (
           <SmallMovieCard key={index} movie={movie} />
