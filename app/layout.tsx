@@ -1,3 +1,4 @@
+import { SearchBar } from "@/components/search-bar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -16,7 +17,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`overflow-x-hidden ${inter.className}`}>
+        <nav className="fixed top-0 z-10 left-0 w-full">
+          <div className="container ml-auto w-full px-4 py-3 bg-red-400 flex items-center justify-between">
+            <div className="flex space-x-3">
+              <h1>Netflix</h1>
+              <div className="flex space-x-2 items-center">
+                <h3>Series</h3>
+                <h3>Movies</h3>
+                <h3>Genres</h3>
+              </div>
+            </div>
+            <div className="relative h-10">
+              <SearchBar />
+            </div>
+          </div>
+        </nav>
+
+        {children}
+      </body>
     </html>
   );
 }
