@@ -1,9 +1,7 @@
 import Banner, { Movie } from "@/components/banner";
 import SmallMovieCard from "@/components/small-movie-card";
 
-import { Label } from "@/components/ui/label";
 import axios from "axios";
-import { Key } from "react";
 
 export default async function Home() {
   const latestMovies = await axios.get(
@@ -19,11 +17,9 @@ export default async function Home() {
       <label>Latest</label>
       <div className="flex overflow-x-scroll w-full scrollbar-hide">
         <div className="flex space-x-4">
-          {latestMovies?.data?.results.map(
-            (movie: Movie, index: Key | null | undefined) => (
-              <SmallMovieCard key={index} movie={movie} />
-            )
-          )}
+          {latestMovies?.data?.results.map((movie: Movie, index: number) => (
+            <SmallMovieCard key={index} movie={movie} />
+          ))}
         </div>
       </div>
     </main>
