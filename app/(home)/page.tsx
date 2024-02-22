@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default async function Home() {
   const latestMovies = await axios.get(
-    `${process.env.NEXT_API_HOST}/api/now-playing`
+    `${process.env.NEXT_API_HOST}/api/latest`
   );
   const popular = await axios.get(`${process.env.NEXT_API_HOST}/api/popular`);
 
