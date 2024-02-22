@@ -6,8 +6,10 @@ import axios from "axios";
 import { Key } from "react";
 
 export default async function Home() {
-  const latestMovies = await axios.get("http://localhost:3000/api/now-playing");
-  const popular = await axios.get("http://localhost:3000/api/popular");
+  const latestMovies = await axios.get(
+    `${process.env.NEXT_API_HOST}/api/now-playing`
+  );
+  const popular = await axios.get(`${process.env.NEXT_API_HOST}/api/popular`);
 
   return (
     <main className="flex items-start pt-20 min-h-screen space-y-3 container relative flex-col p-4">
