@@ -14,12 +14,12 @@ export default async function Home() {
   return (
     <main className="flex items-start pt-20 min-h-screen space-y-3 container relative flex-col p-4">
       <div className="relative h-96 w-full">
-        <Banner list={popular.data} />
+        <Banner list={popular?.data} />
       </div>
-      <Label>Latest</Label>
+      <label>Latest</label>
       <div className="flex overflow-x-scroll w-full scrollbar-hide">
         <div className="flex space-x-4">
-          {latestMovies.data.results.map(
+          {latestMovies?.data?.results.map(
             (movie: Movie, index: Key | null | undefined) => (
               <SmallMovieCard key={index} movie={movie} />
             )
