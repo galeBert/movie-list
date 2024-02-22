@@ -36,7 +36,7 @@ export default function MovieDetailModal({ id }: { id: string }) {
         setDetails((prev) => ({
           ...prev,
           ...details.data,
-          videoId: videoId.data.results?.[0].key ?? null,
+          videoId: videoId.data.results?.[0]?.key ?? null,
         }));
       });
     }

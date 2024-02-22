@@ -23,11 +23,19 @@ export default function SmallMovieCard({ movie }: { movie: Movie }) {
     <>
       <Card className="w-44" onClick={() => setIsOpen(movie.id)}>
         <CardContent className="px-2 py-2">
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt="test"
-            className="object-cover w-full h-[200px]"
-          />
+          <div className="relative h-[200px] w-full">
+            {/* <img
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt="test"
+              className="object-cover w-full h-[200px]"
+            /> */}
+            <Image
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              fill
+              alt="Poster"
+              objectFit="cover"
+            />
+          </div>
         </CardContent>
         <CardFooter>{movie.original_title}</CardFooter>
       </Card>
