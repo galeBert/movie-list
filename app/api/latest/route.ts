@@ -7,7 +7,7 @@ export async function GET(
 ) {
   try {
     const url =
-      "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+      "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1?api_key=1ab628cd967a44587bf30f8e9820031c";
     const token = process.env.NEXT_API_TOKEN;
     const movies = await axios.get(url, {
       headers: {
