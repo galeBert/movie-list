@@ -59,6 +59,7 @@ export function SearchBar() {
     >
       <Input
         type="search"
+        className="text-black"
         onChange={(e) => handleChange(e.target.value)}
         placeholder="Search Movie"
       />
